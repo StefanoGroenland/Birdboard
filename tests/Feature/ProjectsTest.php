@@ -16,7 +16,7 @@ class ProjectsTest extends TestCase
         $this->withoutExceptionHandling();
 
         $attributes = [
-            'title' => $this->faker->sentence,
+            'title'       => $this->faker->sentence,
             'description' => $this->faker->paragraph
         ];
 
