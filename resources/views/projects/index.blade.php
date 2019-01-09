@@ -1,13 +1,10 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-    <title>Birdboard</title>
-</head>
-<body>
-    <h1>Birdboard</h1>
+@section('content')
+    <div class="flex items-center mb-3">
+        <a href="/projects/create">New Project</a>
+    </div>
+
     <ul>
         @forelse($projects as $project)
             <li>
@@ -17,5 +14,4 @@
             <li>No projects yet.</li>
         @endforelse
     </ul>
-</body>
-</html>
+@endsection

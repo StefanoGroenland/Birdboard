@@ -1,14 +1,7 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-    <title>Birdboard</title>
-</head>
-<body>
+@section('content')
     <h1>Create a Project</h1>
-
     <form method="POST" action="/projects">
         @csrf
 
@@ -17,6 +10,6 @@
         <textarea name="description" cols="30" rows="10"></textarea>
 
         <button type="submit">Create project</button>
+        <a href="/projects">Cancel</a>
     </form>
-</body>
-</html>
+@endsection
